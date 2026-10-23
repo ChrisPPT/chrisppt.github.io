@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Privacy notice for the owner-operated Chris AI Personal Assistant and its read-only Gmail and YouTube connections.">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; img-src 'self'; base-uri 'none'; form-action 'none'">
+  <title>Privacy · Chris AI Personal Assistant</title>
+  <link rel="stylesheet" href="site.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header><div class="wrap header-row">
+    <a class="brand" href="index.html">Chris AI Personal Assistant<span>Public application information</span></a>
+    <nav aria-label="Main navigation"><a href="index.html">Overview</a><a href="privacy.html" aria-current="page">Privacy</a><a href="terms.html">Terms</a></nav>
+  </div></header>
+  <main class="wrap prose" id="main">
+    <p class="eyebrow">Privacy notice</p>
+    <h1>Your sources, used for your own assistant.</h1>
+    <p class="meta">Effective 23 October 2026</p>
+    <p class="lead">This notice describes the local application and the optional Google connections named Chris AI Gmail and Chris AI YouTube. They are parts of Chris AI Personal Assistant, an application operated by its owner for personal use.</p>
+    <aside class="note"><p>This public site provides application information only. It has no sign-in, upload form, advertising, analytics script, or tracking cookie. A hosting provider may process ordinary connection logs under its own policies; the assistant's private data is not uploaded to this site.</p></aside>
+    <section class="section" aria-labelledby="access">
+      <h2 id="access">1. Data accessed and collected</h2>
+      <p>Google data is accessed only after the account owner explicitly authorizes the corresponding connection. The owner chooses which source to enable.</p>
+      <ul>
+        <li><strong>Gmail:</strong> message bodies and snippets; subjects; sender and recipient headers; message dates; label, thread, and message identifiers. An initial bounded date range and later incremental changes are read using <code>https://www.googleapis.com/auth/gmail.readonly</code>.</li>
+        <li><strong>YouTube:</strong> channel identifiers used to check account identity; subscriptions; liked-video metadata; and items from playlists selected by the owner. Metadata may include titles, descriptions, channel names, links, identifiers, and available dates. The scope is <code>https://www.googleapis.com/auth/youtube.readonly</code>. Watch history is not available through this API connection.</li>
+        <li><strong>Authorization and operation:</strong> OAuth client configuration and refresh credentials, synchronization cursors, a hashed account-identity fingerprint, source status, and bounded usage or error records.</li>
+        <li><strong>Other owner-selected context:</strong> the application may combine Google records with goals, background, tasks, files, or other sources the owner separately supplies or authorizes. It also stores resulting suggestions, evidence links, feedback, and local memories.</li>
+      </ul>
+      <p>The Google connectors use read-only APIs. They do not request Google passwords, send or modify Gmail messages, or change the account's YouTube activity.</p>
+    </section>
+    <section class="section" aria-labelledby="use">
+      <h2 id="use">2. How the application uses data</h2>
+      <p>Data is used to provide the owner's personal assistant: local search, source-linked summaries, information recommendations, task and communication preparation, and decision support. A single view, like, or subscription is not treated as a confirmed long-term preference.</p>
+      <p>Google user data is not sold, rented, used for advertising, or provided to data brokers. The application does not use Google user data to develop, improve, or train general-purpose AI or machine-learning models. Local feedback changes the assistant's stored context; it does not train model weights.</p>
+      <p>Google data is to be used only for the user-facing functions described here, consistent with the Google API Services User Data Policy, including its Limited Use requirements. This statement describes the application's data-use restriction; it is not a statement that Google has verified or approved the application.</p>
+    </section>
+    <section class="section" aria-labelledby="sharing">
+      <h2 id="sharing">3. External processing and sharing</h2>
+      <p>Local storage does not mean all analysis is offline. When cloud analysis is enabled, the application selects bounded, relevant source excerpts together with necessary goals, context, and instructions. It attempts to replace identity details and remove sensitive URL parameters before sending them. This filtering is not complete anonymization and may miss sensitive information.</p>
+      <ul>
+        <li><strong>Configured AI service:</strong> the current implementation supports Codex through the owner's ChatGPT subscription, operated by OpenAI, and optional DeepSeek processing. DeepSeek is used only when the owner explicitly selects it or enables the supported paid backup. The configured provider receives the request fragments and produces analysis.</li>
+        <li><strong>Telegram:</strong> if the owner binds and enables a personal bot, Telegram receives selected summaries, replies, and notifications. When the owner explicitly asks to view a source, limited source text, including saved email text, may also be sent. Files or text the owner sends to the bot are already processed by Telegram before the assistant receives them.</li>
+        <li><strong>Google:</strong> Google's authorization and API services process account authorization and the read-only requests needed for synchronization.</li>
+      </ul>
+      <p>There is no public sharing feature or advertising integration. These services operate under their own terms, account settings, retention practices, and applicable requirements. This application cannot promise that a third-party service retains nothing, never permits human access, or can recall all previously transmitted data. Provider settings and eligibility must be reviewed before enabling processing of Google user data; this notice does not override provider terms.</p>
+    </section>
+    <section class="section" aria-labelledby="storage">
+      <h2 id="storage">4. Local storage and retention</h2>
+      <p>Collected records, search indexes, evidence, suggestions, feedback, tasks, and memories are stored on the owner's computer. They are retained until the owner deletes them; there is no general automatic expiry for source content. OAuth credentials are stored encrypted, with the encryption key protected for the local operating-system user. The database and all content files are not represented as fully encrypted storage.</p>
+      <p>The assistant's web service is configured to listen on the local loopback interface. Access to the computer, operating-system account, local backups, and any exported copies remains the owner's responsibility. Backups can contain personal records; a complete local backup can also contain encrypted credentials.</p>
+    </section>
+    <section class="section" aria-labelledby="controls">
+      <h2 id="controls">5. Pause, revoke, and delete</h2>
+      <ol>
+        <li><strong>Stop collection:</strong> disable the relevant source in the local assistant's Settings. Pausing synchronization does not delete previously collected records.</li>
+        <li><strong>Revoke Google access:</strong> remove the corresponding app from the Google Account's third-party connections. The local assistant also provides a credential-revocation control that clears the saved authorization credential and disables the source; it does not itself revoke the grant at Google. Neither action automatically deletes the local index.</li>
+        <li><strong>Delete local data:</strong> use the assistant's data-deletion controls to select a source, person, date range, individual item, or all records. Deletion clears matching current and historical source content and search entries, linked suggestions and tasks, associated queued work, saved conversations, and pending notifications. A derived memory supported only by deleted evidence is removed; a memory with other evidence is marked for review.</li>
+      </ol>
+      <p>Managed original files are deleted as part of cleanup. A file locked by another program may remain pending until a later cleanup attempt. Non-reversible deletion fingerprints are retained to prevent ordinary automatic re-import; an explicit re-import or backup restoration can recreate records.</p>
+      <p>Local deletion does not delete messages from Gmail, change YouTube, erase an external source file, remove a separate backup, or recall messages already sent to Telegram or an AI provider. Copies held by another service or previously exported by the owner require separate handling. Data already sent to a provider may be subject to that provider's retention and deletion process.</p>
+    </section>
+    <section class="section" aria-labelledby="owner">
+      <h2 id="owner">6. Requests and changes</h2>
+      <p>The application is operated by its account owner and is not offered as a public multi-user service. The owner can inspect sources, correct information, pause collection, and initiate deletion from the local application. This information site does not accept private documents or account requests.</p>
+      <p>If the application is offered to additional users or its processing changes, the maintainer must review this notice, provide a suitable support contact, and complete any additional Google policy or verification requirements before that expanded use. The revision date will be updated when this notice changes.</p>
+    </section>
+    <section class="section" lang="zh-CN" aria-labelledby="zh">
+      <h2 id="zh">中文要点</h2>
+      <p>Gmail 与 YouTube 分别经本人授权后只读同步，资料主要保存在本机。启用 AI 时会按需发送有限片段并尝试去标识；启用 Telegram 后可能发送摘要，或在本人明确请求时发送来源正文片段。应用不出售资料、不做广告、不将 Google 用户数据用于训练通用模型。第三方服务的保留与使用受其条款和账号设置影响，不能承诺零留存。停用、撤销授权与删除本地资料是三个不同操作；本地删除无法自动撤回已发送的外部副本或独立备份。</p>
+    </section>
+  </main>
+  <footer><div class="wrap footer-row"><p>Chris AI Personal Assistant · Privacy notice</p><p><a href="index.html">Overview</a><a href="terms.html">Terms</a></p></div></footer>
+</body>
+</html>
