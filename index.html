@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Public information about Chris AI Personal Assistant, an owner-operated local application with optional read-only Gmail and YouTube connections.">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; img-src 'self'; base-uri 'none'; form-action 'none'">
+  <title>Chris AI Personal Assistant</title>
+  <link rel="stylesheet" href="site.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header>
+    <div class="wrap header-row">
+      <a class="brand" href="index.html">Chris AI Personal Assistant<span>Public application information</span></a>
+      <nav aria-label="Main navigation">
+        <a href="index.html" aria-current="page">Overview</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+      </nav>
+    </div>
+  </header>
+  <main class="wrap" id="main">
+    <p class="eyebrow">Local application · private use</p>
+    <h1>A personal assistant with sources you can inspect.</h1>
+    <p class="lead">Chris AI Personal Assistant helps its owner review information, consider priorities, and keep useful context. Authorized sources are collected into a local index; suggestions link back to supporting material.</p>
+    <aside class="note">
+      <p><strong>This website is an information site.</strong> It does not host the assistant, offer public account registration, connect visitors to Google, or receive the owner's personal records. The assistant runs separately on the owner's computer.</p>
+    </aside>
+    <div class="grid">
+      <section class="card">
+        <h2>Information and priorities</h2>
+        <p>Review relevant messages and source material alongside the owner's stated goals. Distinguish confirmed facts, source statements, and uncertain suggestions.</p>
+      </section>
+      <section class="card">
+        <h2>Learning and discovery</h2>
+        <p>Use authorized interests and public material to surface potentially useful information. A subscription or liked video is a limited signal, not proof that content has been watched or mastered.</p>
+      </section>
+      <section class="card">
+        <h2>Owner-controlled delivery</h2>
+        <p>Read the local dashboard or receive selected summaries through the owner's configured Telegram bot. The bot is bound to the owner; it is not a public messaging service.</p>
+      </section>
+      <section class="card">
+        <h2>Visible evidence and controls</h2>
+        <p>Inspect source records, correct suggestions, pause a source, and delete local records. AI output remains advice or a draft for the owner to review.</p>
+      </section>
+    </div>
+    <section class="section" aria-labelledby="connections">
+      <h2 id="connections">Optional Google connections</h2>
+      <p>The OAuth application names <strong>Chris AI Gmail</strong> and <strong>Chris AI YouTube</strong> are two separate, read-only connections used by this same local personal assistant. Each requires the account owner's explicit Google authorization.</p>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th scope="col">Connection</th><th scope="col">What it reads</th><th scope="col">Purpose</th></tr></thead>
+          <tbody>
+            <tr><td>Gmail<br><code>gmail.readonly</code></td><td>Message text and related headers, dates, labels, and identifiers within the configured synchronization range.</td><td>Local retrieval, message summaries, and evidence for the owner's personal decisions.</td></tr>
+            <tr><td>YouTube<br><code>youtube.readonly</code></td><td>The authorized account's channel identity, subscriptions, liked videos, and owner-selected playlists, as made available by the API.</td><td>Local organization and context for information recommendations. This API connection does not provide watch history.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>These connectors do not send or modify email, change subscriptions, add likes, post comments, or edit playlists. Data is accessed through Google's APIs rather than by collecting Google passwords.</p>
+    </section>
+    <section class="section" aria-labelledby="processing">
+      <h2 id="processing">Local storage, with disclosed external processing</h2>
+      <p>Source records, evidence, and the search index are stored on the owner's computer. When AI analysis is enabled, bounded, relevant excerpts may be sent to the configured AI service. The current implementation supports Codex through the owner's ChatGPT subscription and an optional, explicitly enabled DeepSeek service. Selected output may be sent through Telegram.</p>
+      <p>Local storage does not mean every processing step stays offline. Read the privacy notice for data categories, recipients, retention, and deletion limits.</p>
+      <div class="links"><a class="button" href="privacy.html">Read the privacy notice</a><a class="button" href="terms.html">Read the terms</a></div>
+    </section>
+    <section class="section" lang="zh-CN" aria-labelledby="chinese">
+      <h2 id="chinese">中文说明</h2>
+      <p>这是本地自用的个人 AI 助手介绍站。Gmail 与 YouTube 必须分别由账号本人授权，只读同步。个人资料不托管在本站；启用模型分析或 Telegram 后，必要片段或摘要可能交给相应服务处理。本站不提供公众注册或在线助手登录。</p>
+    </section>
+  </main>
+  <footer><div class="wrap footer-row"><p>Chris AI Personal Assistant<br>Owner-operated application · Public information only</p><p><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></p></div></footer>
+</body>
+</html>
